@@ -1,0 +1,16 @@
+{
+  "name": "walk-in-survey",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@bonnie.sys.afrihost.com:24/branding/walk-in-survey.git",
+  "author": "Larry Nxumalo <larry.nxumalo@afrihost.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
