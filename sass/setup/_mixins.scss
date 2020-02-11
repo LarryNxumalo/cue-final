@@ -1,0 +1,123 @@
+@mixin ellipse() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin placeholder() {
+	::-webkit-input-placeholder {
+		@content;
+	}
+
+	::-moz-placeholder {
+		@content;
+	}
+
+	:-ms-input-placeholder {
+		@content;
+	}
+
+	:-moz-placeholder {
+		@content;
+	}
+}
+
+@mixin break-point($point) {
+
+	$mobile: "(max-width: 600px)";
+	$tablet-portrait: "(max-width: 768px)";
+	$tablet-landscape: "(max-width: 1024px)";
+	$desktop: "(min-width: 1024px)";
+
+	@if $point == desktop {
+		@media #{$desktop} {
+			@content;
+		}
+	} @else if $point == tablet-landscape {
+		@media #{$tablet-landscape} {
+			@content;
+		}
+	} @else if $point == tablet-portrait {
+		@media #{$tablet-portrait} {
+			@content;
+		}
+	} @else if $point == mobile {
+		@media #{$mobile}  {
+			@content;
+		}
+	}
+
+}
+
+// @include position($position, $top $right $bottom $left)
+// shorthand include for setting position properties
+@mixin position($position: relative, $coordinates: null null null null) {
+
+	@if type-of($position) == list {
+		$coordinates: $position;
+		$position: relative;
+	}
+
+	$coordinates: unpack($coordinates);
+
+	$offsets: (
+			top: nth($coordinates, 1),
+			right: nth($coordinates, 2),
+			bottom: nth($coordinates, 3),
+			left: nth($coordinates, 4)
+	);
+
+	position: $position;
+
+	@each $offset, $value in $offsets {
+		@if is-length($value) {
+			#{$offset}: $value;
+		}
+	}
+}
+
+// Convert shorthand to the 4-value syntax
+@function unpack($shorthand) {
+	@if length($shorthand) == 1 {
+		@return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
+	} @else if length($shorthand) == 2 {
+		@return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 1) nth($shorthand, 2);
+	} @else if length($shorthand) == 3 {
+		@return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 3) nth($shorthand, 2);
+	} @else {
+		@return $shorthand;
+	}
+}
+
+
+// NEW MIXINS
+// =========================
+@mixin box-shadow($vals...) {
+  box-shadow: #{$vals}
+}
+
+@mixin border-radius($val) {
+  border-radius: $val;
+}
+
+@mixin rotate($val) {
+  transform: rotate($val);
+}
+
+@mixin transition($vals...) {
+  transition: #{$vals};
+}
+
+@mixin translate() {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-align($position: relative, $top: 50%, $translateY:50%) {
+  position: $position;
+  top: $top;
+  -webkit-transform: translateY(-$translateY);
+  -ms-transform: translateY(-$translateY);
+  transform: translateY(-$translateY);
+}
