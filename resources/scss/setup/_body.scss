@@ -6,250 +6,24 @@ html {
     background: $bg;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
-    // min-height: 100vh;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: 100%;
     background: $bg;
     font-family: 'Gotham', sans-serif;
-    width: 100vw;
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    //LOGO
-    img {
-        position: absolute;
-        z-index: 9999;
-        right: 120px;
-        top: 75px;
-        z-index: 9999;
-        width: 173.75px;
-        height: 94px;
-        pointer-events: none;
-    }
-    //LOGO END
-    .head {
-        height: 100vh;
-        width: 180px;
-        background: #113E72;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        left: 0;
-        position: fixed;
-        z-index: 99999;
-        padding: 40px 0;
-        overflow: hidden;
-        .burger {
-            z-index: 9999999;
-            align-self: flex-start;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            position: absolute;
-            transition: all ease-in-out .25s;
-            cursor: pointer;
-            display: none;
-            &:hover {
-                opacity: 1;
-                 :nth-child(1) {
-                    animation: bun-top ease-in-out 1s infinite alternate-reverse;
-                }
-                 :nth-child(2) {
-                    animation: burger ease-in-out 1s infinite alternate-reverse;
-                }
-                 :nth-child(3) {
-                    animation: bun-bottom ease-in-out 1s infinite alternate-reverse;
-                }
-            }
-            @keyframes bun-top {
-                0% {
-                    transform: rotate(8deg)
-                }
-                100% {
-                    transform: rotate(-8deg)
-                }
-            }
-            @keyframes bun-bottom {
-                0% {
-                    transform: rotate(-8deg)
-                }
-                100% {
-                    transform: rotate(8deg)
-                }
-            }
-            @keyframes burger {
-                0% {
-                    transform: translateX(-10px)
-                }
-                100% {
-                    transform: translateX(10px)
-                }
-            }
-            .line {
-                width: 40px;
-                height: .9px;
-                background: #fff;
-                margin-bottom: 7px;
-                box-shadow: 0px 3px 4px rgba(0, 0, 0, .3), 0px -1.5px 4px rgba(255, 255, 255, .2);
-                transition: all ease-in-out .25s;
-                &:nth-child(2) {
-                    border-radius: 50%;
-                    width: 10px;
-                    height: 10px;
-                    background: #F54508;
-                }
-            }
-        }
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            // padding: 100px 20px 20px;
-            li {
-                width: 120px;
-                padding: 5px 0;
-                // box-shadow: 0px 3px 4px rgba(0, 0, 0, .3), 0px -1.5px 4px rgba(255, 255, 255, .2);
-                &:hover {
-                    // box-shadow: inset 0px 3px 4px rgba(0, 0, 0, .3), inset 0px -1.5px 4px rgba(255, 255, 255, .2);
-                    a {
-                        color: #dedede;
-                    }
-                }
-            }
-            a,
-            li {
-                color: #dedede;
-                text-transform: uppercase;
-                font-size: 18px;
-                font-weight: 300;
-                margin-bottom: 20px;
-                margin-right: 5px;
-                padding-left: 15px;
-                padding-right: 15px;
-                text-shadow: 0px 3px 4px rgba(0, 0, 0, .3), 0px -1.5px 4px rgba(255, 255, 255, .2);
-                cursor: pointer;
-                overflow: hidden;
-                position: relative;
-                transition: all ease-in-out .25s;
-            }
-            a:hover {
-                color: #fff;
-            }
-            li:before {
-                content: "";
-                position: absolute;
-                height: 25px;
-            }
-            li:hover:before,
-            li:checked:before {
-                animation: drop ease-in-out .50s;
-                border-right: 5px solid #F54508;
-                box-shadow: 0px 3px 4px rgba(0, 0, 0, .3), 0px -1.5px 4px rgba(255, 255, 255, .2);
-            }
-        }
-        @keyframes drop {
-            0% {
-                transform: translateY(-60px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-    }
 }
 
 //end html body
 //main section
 main {
-    position: relative;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 450vw;
-    background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
-    background-size: $dot-space $dot-space;
-    display: flex;
-    flex-direction: row;
-    overflow: none;
-    scroll-behavior: smooth;
-}
-
-.cursor {
-    width: 70px;
-    height: 70px;
-    border: 3px solid #F54508;
-    border-radius: 50%;
-    position: absolute;
-    top: 28px;
-    left: 0;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    animation: cursorAnim .8s infinite alternate;
-    pointer-events: none;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cursor::after {
-    content: "";
-    width: 50px;
-    height: 50px;
-    border: 8px solid #3DB1F7;
-    background: #3DB1F7;
-    border-radius: 50%;
-    position: absolute;
-    // opacity: .9;
-    top: 28px;
-    left: 28px;
-    animation: cursorAnim2 .8s infinite alternate;
-    pointer-events: none;
-    z-index: 999999;
-}
-
-@keyframes cursorAnim {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.9);
-    }
-}
-
-@keyframes cursorAnim2 {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.4);
-    }
-}
-
-@keyframes cursorAnim3 {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(3);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
-
-.expand {
-    animation: cursorAnim3 .5s forwards;
-    border: 4px solid #F54508;
-    background: #F54508;
+    width: 100%;
 }
 
 @include break-point(tablet-landscape) {}
@@ -257,43 +31,25 @@ main {
 @include break-point(tablet-portrait) {}
 
 @include break-point(mobile) {
-    body {
-        img {
-            display: none;
-        }
-        .head {
-            height: 100px;
-            width: 100vw;
-            background: #113E72;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            top: 0;
-            position: fixed;
-            z-index: 99999;
-            padding: 40px 0;
-            overflow: hidden;
-            .burger {
-                display: block;
-            }
-            ul {
-                display: none;
-            }
-        }
+    html {
+        box-sizing: border-box;
     }
-    main {
-        position: relative;
+    body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        width: 100vw;
-        height: 500vh;
-        background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
-        background-size: $dot-space $dot-space;
-        display: flex;
-        flex-direction: column;
-        overflow: none;
-        scroll-behavior: smooth;
+        width: 100%;
+        background: $bg;
+        font-family: 'Gotham', sans-serif;
+    }
+    main {
+        width: 100%;
+        section {
+            width: 100vw;
+            h1 {
+                margin-bottom: 90px;
+                font-size: 50px;
+            }
+        }
     }
 }

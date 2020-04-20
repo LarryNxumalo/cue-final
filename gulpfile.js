@@ -30,7 +30,6 @@ gulp.task('copy', (done) => {
     gulp.src(['resources/images/**/*']).pipe(gulp.dest('dist/img'));
     gulp.src(['resources/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
     gulp.src(['*.html']).pipe(gulp.dest('dist/'));
-    gulp.src(['*.js']).pipe(gulp.dest('dist/'));
 
     done();
 });

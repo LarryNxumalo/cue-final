@@ -1,153 +1,156 @@
-// //Header
-// header {
-//     width: 100%;
-//     margin: 0 auto;
-//     padding: 0 24px;
-//     background: url(../img/bg.png) no-repeat center center;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     background-size: cover;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     position: relative;
-//     overflow: hidden;
-//     .title-heading-wrap {
-//         padding: 200px 0 90px 0;
-//         min-width: 636px;
-//         align-self: flex-start;
-//         position: relative;
-//         h1 {
-//             font-size: 4.2rem;
-//             line-height: 44px;
-//             font-weight: 300;
-//             color: $white;
-//             text-align: left;
-//             margin-bottom: 24px;
-//         }
-//         h2 {
-//             font-size: 1.6rem;
-//             font-weight: 500;
-//             line-height: 24px;
-//             color: $white;
-//             margin-bottom: 15px;
-//         }
-//         h3 {
-//             font-size: 1.6rem;
-//             font-weight: 300;
-//             line-height: 24px;
-//             color: $white;
-//         }
-//         .logo-wrap {
-//             position: absolute;
-//             right: -220px;
-//             top: -190px;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//             .circle {
-//                 display: block;
-//                 border: none;
-//                 border-radius: 50%;
-//                 width: 371px;
-//                 height: 329px;
-//                 background-color: $logo-circle-background;
-//                 position: absolute;
-//             }
-//             .circle-dark {
-//                 border-radius: 50%;
-//                 background-color: $logo-circle-dark-background;
-//                 z-index: 1;
-//                 position: relative;
-//                 left: -10px;
-//                 top: -7px;
-//                 width: 339px;
-//                 height: 329px;
-//                 .logo {
-//                     position: absolute;
-//                     z-index: 2;
-//                     bottom: 60px;
-//                     left: 70px;
-//                     height: 41px;
-//                     width: 186px;
-//                 }
-//             }
-//         }
-//     }
-// }
-// @include break-point(tablet-landscape) {
-//     header {
-//         width: 100%;
-//         margin: 0 auto;
-//         padding: 0 24px;
-//         .title-heading-wrap {
-//             // margin: 0 auto;
-//             padding: 200px 0 100px 0;
-//             min-width: 320px;
-//             position: relative;
-//             h1 {
-//                 text-align: center;
-//             }
-//             h2 {
-//                 text-align: center;
-//             }
-//             h3 {
-//                 text-align: center;
-//             }
-//             .logo-wrap {
-//                 right: 40px;
-//             }
-//         }
-//     }
-// }
-// @include break-point(tablet-portrait) {
-//     header {
-//         width: 100%;
-//         margin: 0 auto;
-//         padding: 0 24px;
-//         .title-heading-wrap {
-//             // margin: 0 auto;
-//             padding: 200px 0 100px 0;
-//             min-width: 320px;
-//             position: relative;
-//             h1 {
-//                 text-align: center;
-//             }
-//             h2 {
-//                 text-align: center;
-//             }
-//             h3 {
-//                 text-align: center;
-//             }
-//             .logo-wrap {
-//                 right: 40px;
-//             }
-//         }
-//     }
-// }
-// @include break-point(mobile) {
-//     header {
-//         width: 100%;
-//         margin: 0 auto;
-//         padding: 0 24px;
-//         .title-heading-wrap {
-//             padding: 200px 0 100px 0;
-//             min-width: 320px;
-//             position: relative;
-//             h1 {
-//                 text-align: center;
-//             }
-//             h2 {
-//                 text-align: center;
-//             }
-//             h3 {
-//                 text-align: center;
-//             }
-//             .logo-wrap {
-//                 right: -5px;
-//                 top: -190px;
-//             }
-//         }
-//     }
-// }
+//Header
+header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    background: url(../img/bg.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    .title-heading-wrap {
+        padding: 200px 0 90px 0;
+        min-width: 636px;
+        align-self: flex-start;
+        position: relative;
+        h1 {
+            font-size: 4.2rem;
+            line-height: 44px;
+            font-weight: 300;
+            color: $white;
+            text-align: left;
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 24px;
+            color: $white;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 24px;
+            color: $white;
+        }
+        .logo-wrap {
+            position: absolute;
+            right: -220px;
+            top: -190px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .circle {
+                display: block;
+                border: none;
+                border-radius: 50%;
+                width: 371px;
+                height: 329px;
+                background-color: $logo-circle-background;
+                position: absolute;
+            }
+            .circle-dark {
+                border-radius: 50%;
+                background-color: $logo-circle-dark-background;
+                z-index: 1;
+                position: relative;
+                left: -10px;
+                top: -7px;
+                width: 339px;
+                height: 329px;
+                .logo {
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 60px;
+                    left: 70px;
+                    height: 41px;
+                    width: 186px;
+                }
+            }
+        }
+    }
+}
+
+@include break-point(tablet-landscape) {
+    header {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 24px;
+        .title-heading-wrap {
+            // margin: 0 auto;
+            padding: 200px 0 100px 0;
+            min-width: 320px;
+            position: relative;
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+            }
+            h3 {
+                text-align: center;
+            }
+            .logo-wrap {
+                right: 40px;
+            }
+        }
+    }
+}
+
+@include break-point(tablet-portrait) {
+    header {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 24px;
+        .title-heading-wrap {
+            // margin: 0 auto;
+            padding: 200px 0 100px 0;
+            min-width: 320px;
+            position: relative;
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+            }
+            h3 {
+                text-align: center;
+            }
+            .logo-wrap {
+                right: 40px;
+            }
+        }
+    }
+}
+
+@include break-point(mobile) {
+    header {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 24px;
+        .title-heading-wrap {
+            padding: 200px 0 100px 0;
+            min-width: 320px;
+            position: relative;
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+            }
+            h3 {
+                text-align: center;
+            }
+            .logo-wrap {
+                right: -5px;
+                top: -190px;
+            }
+        }
+    }
+}
